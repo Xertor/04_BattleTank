@@ -10,11 +10,11 @@ void ATankPlayerController::BeginPlay()
 	GetControlledTank();
 	if (!GetControlledTank())
 	{
-		UE_LOG(LogTemp, Warning, TEXT("No posessed tank found."));
+		UE_LOG(LogTemp, Warning, TEXT("No possessed tank found."));
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Found posessed tank %s."), *GetPawn()->GetName());
+		UE_LOG(LogTemp, Warning, TEXT("Found possessed tank %s."), *GetPawn()->GetName());
 	}
 };
 
