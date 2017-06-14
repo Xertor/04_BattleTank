@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Mario Arsenov Copyright 2017
 
 #pragma once
 
@@ -15,9 +15,8 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 	GENERATED_BODY()
 	
 public:
-	ATank* GetControlledTank() const;
-
 	virtual void BeginPlay() override;
-	
-	
+
+private:
+	ATank* GetControlledTank() const;	
 };
