@@ -33,7 +33,9 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 		StartLocation,
 		HitLocation,
 		LaunchSpeed,
-		// default value parameters false, 0, 0,
+		false, // default value parameters false, 0, 0,
+		0,
+		0,
 		ESuggestProjVelocityTraceOption::DoNotTrace
 	);
 	if (bHaveAimSolution)
