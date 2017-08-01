@@ -7,16 +7,6 @@
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("PlayerController BeginPlay."));
-	GetControlledTank();
-	if (!GetControlledTank())
-	{
-		UE_LOG(LogTemp, Warning, TEXT("No possessed tank found."));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Found possessed tank %s."), *GetPawn()->GetName());
-	}
 };
 
 void ATankPlayerController::Tick(float DeltaTime)
