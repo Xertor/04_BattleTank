@@ -8,7 +8,6 @@
 /**
  * Responsible for helping the player aim.
  */
-class ATank;
 class UTankAimingComponent;
 
 UCLASS()
@@ -22,8 +21,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
-	UFUNCTION(BlueprintCallable, Category = "Setup")
-	ATank* GetControlledTank() const;
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Setup")
 	void FoundAimingComponent(UTankAimingComponent* AimCompRef);

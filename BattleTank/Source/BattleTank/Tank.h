@@ -6,7 +6,6 @@
 #include "Tank.generated.h" // Put new includes above 
 
 // Forward Declerations
-class UTankAimingComponent;
 class UTankBarrel;
 class UTankTurret;
 class AProjectile;
@@ -17,14 +16,9 @@ class BATTLETANK_API ATank : public APawn
 	GENERATED_BODY()
 
 public:
-	void AimAt(FVector HitLocation);
 
 	UFUNCTION(BlueprintCallable, Category = "Fire")
 	void Fire();
-
-protected:
-	UPROPERTY(BlueprintReadOnly)
-	UTankAimingComponent* TankAimingComponent = nullptr;
 
 private:
 	// Sets default values for this pawn's properties
@@ -43,7 +37,7 @@ private:
 	float ReloadTimeSeconds = 3;
 
 	// Local barrel reference for spawning projectile
-	UTankBarrel* Barrel = nullptr; //TODO remove
+	UTankBarrel* Barrel = nullptr; // TODO Remove
 
 	double LastFireTime = 0;
 };
